@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row mt-2 mb-2">
+      @for(item of listadoVehiculos; track item.id) {
+      <div class="col-md-3 col-12">
+        <div class="card" style="width: 18rem">
+          <img src="https://starwars-visualguide.com/assets/img/vehicles/${item.id}.jpg" class="card-img-top" [alt]="item.name" />
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">
+              Model: {{ item.model }} - Manufacturer: {{ item.manufacturer }}</p>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
